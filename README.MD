@@ -2,11 +2,11 @@ Hi cats, this is my implementation of a Twitter client. Created just for testing
 
 ## Usage
 
-# Clone the repo
+## Clone the repo
 
 ### `git clone https://github.com/stahlhammer88/t-bot.git`
 
-# Install all the dependencies
+## Install all the dependencies
 cd into the project root folder and type in
 
 ### `npm i`
@@ -15,10 +15,8 @@ then cd into the "client" folder and hit again
 
 ### `npm i`
 
-# Start it
+## Start it
 
 In the root folder type in
 
 ### `npm start`
-
-==========================================
