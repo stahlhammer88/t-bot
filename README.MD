@@ -1,6 +1,6 @@
 Hi cats, this is my implementation of a Twitter client. Created just for testing purposes.
 
-## Usage
+# Usage
 
 ## Clone the repo
 
