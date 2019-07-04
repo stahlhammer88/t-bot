@@ -1,0 +1,236 @@
+$fonts: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+html, body, #root {
+    margin: 0;
+    padding: 0;    
+    font-family: $fonts;    
+    box-sizing: border-box;     
+    background: #f5f5f5;   
+}
+
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    >.wrapper {
+        flex:1;
+    }
+}
+
+.wrapper {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;        
+    position: relative;    
+    clear: both;
+    background: #fff;    
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+
+.secondary-font {
+    font-size: .9em;
+    color: gray;
+}
+
+.prim-btn {
+    display: inline-block;
+    background: #1da1f2;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.tweet {
+    $_: &;
+    display: flex;    
+    border-bottom: 1px solid #e4e4e3;
+    padding: 30px 20px; 
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background: #f9f9f9;
+    }
+
+    &__author-img {
+        margin-right: 15px;
+        img{
+            border-radius: 50%;
+            overflow: hidden;
+        }        
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__name {
+        font-size: 1.15em;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    &__screen-name {
+        @extend .secondary-font; 
+        margin-top: 5px;       
+        margin-right: 15px;       
+        flex-grow: 1;
+    }
+
+    &__date {
+        @extend .secondary-font;        
+        margin-top: 5px;
+    }
+
+    &__footer {
+        flex-basis: 100%;
+        display: flex;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+
+    &__hash {
+        padding-top: 10px;
+        color: #1da1f2;
+
+        span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+    &__likes {
+        margin-right: 20px;
+    }
+
+    &--details {        
+        flex-wrap: wrap;
+        cursor: unset;
+
+        &:hover {
+            background: #fff;
+        }
+        
+        #{$_}__author-img {
+            position: absolute;
+        }
+
+        #{$_}__header {
+            padding-left: 65px;
+        }
+
+        #{$_}__name {
+            flex-basis: 100%;
+        }
+
+        #{$_}__text {
+            font-size: 1.5em;
+        }
+
+        #{$_}__date {
+            margin-top: 0;
+        }
+
+        #{$_}__screen-name {
+            flex-grow: 1;
+        }
+    }
+
+    &__media {  
+        padding-top: 10px;      
+    }
+
+    &__media-img {
+        width: 50%;
+        height:200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+}
+
+.retweeted {
+    padding: 20px;
+    border: 1px solid #e4e4e2;
+    border-radius: 5px;
+
+    &__name {
+        float:left;        
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    &__screen-name {
+        float:left;
+        margin-top: 2px;
+        @extend .secondary-font;
+    }
+
+    &__text {
+        clear: both;
+    }
+}
+
+.search-bar {
+    form {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }    
+
+    input[type=text] {
+        padding: 8px 7px;
+        font-size: .9em;
+    }
+
+    input[type=submit] {
+        @extend .prim-btn;
+        margin-left: 5px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.go-back {
+    @extend .prim-btn;
+    padding: 8px 20px;
+    text-decoration: none;
+    margin: 10px 0 0 20px;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.placeholder {
+    text-align: center;
+    font-weight: bold;
+    color: gray;
+    opacity: .5;
+    font-size: 1.8em;
+    padding-top: 40px;
+}
+
+.loading {
+    padding-top: 40px;
+
+    >div {
+        margin: 0 auto;
+    }
+}
